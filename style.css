@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* SỬA: thay cho height: 100vh */
+}
+
+.header,
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Navigation: Flexbox xếp menu nằm ngang */
+.nav {
+    display: flex;
+    /* thêm */
+    flex-wrap: wrap;
+    /* thêm: hẹp quá thì xuống dòng */
+    justify-content: center;
+    /* thêm */
+    background-color: #444;
+    padding: 0;
+    /* sửa: padding chuyển vào từng liên kết */
+}
+
+.nav a {
+    /* thêm */
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+}
+
+.nav a:hover {
+    /* thêm */
+    background-color: #666;
+}
+
+.main-container {
+    display: flex;
+    flex: 1;
+}
+
+.content {
+    flex: 3;
+    padding: 20px;
+}
+
+.content p {
+    /* thêm */
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.sidebar ul {
+    /* thêm */
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.sidebar li {
+    /* thêm */
+    padding: 5px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+}
